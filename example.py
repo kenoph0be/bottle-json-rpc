@@ -2,11 +2,11 @@
 
 """
 Test sum:   curl -g "http://127.0.0.1:8080/api" --data '{"method": "sum", "params": [1,2,3], "id": 1}'; echo
-Output:     6
+Output:     {"jsonrpc": "2.0", "id": 1, "result": 6}
 Test mul 1: curl -g "http://127.0.0.1:8080/api" --data '{"method": "mul", "params": {"a":-1,"b":7}, "id": 1}'; echo
-Output:     -7
+Output:     {"jsonrpc": "2.0", "id": 1, "result": -7}
 Test mul 2: curl -g "http://127.0.0.1:8080/api" --data '{"method": "mul", "params": [-1,7], "id": 1}'; echo
-Output:     -7
+Output:     {"jsonrpc": "2.0", "id": 1, "result": -7}
 """
 
 from bottle import run
